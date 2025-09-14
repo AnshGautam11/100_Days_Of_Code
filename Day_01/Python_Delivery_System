@@ -1,0 +1,24 @@
+print("Welcome to the Python Delivery System!")
+size = input("Please enter the size of your delivery (small, medium, large)")
+pepperoni = input("Would you like pepperoni? (yes/no) ")
+extra_cheese = input("Would you like extra cheese? (yes/no) ")
+cost = 0
+if size == "small":
+    cost = 15
+elif size == "medium":
+    cost = 20 
+elif size == "large":
+    cost = 25
+else:
+    print("Invalid size selected. Please choose small, medium, or large.")
+    exit()
+if pepperoni == "yes":
+    if size == "small":
+        cost += 2
+    else:
+        cost += 3
+if extra_cheese == "yes":
+    cost += 1   
+
+print(f"Your total cost is: ${cost}")
+print("Thank you for using the Python Delivery System!")
